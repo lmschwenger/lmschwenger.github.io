@@ -60,39 +60,54 @@
 <section id="projects">
     <div class="container">
         <h2 class="section-title">Python Projects</h2>
-        <div class="projects-container">
-            <div class="project-card">
-                <img src="assets/projects/click4coords.png" alt="Click 4 Coordinates" class="project-image">
-                <div class="project-info">
-                    <h3>Click 4 Coordinates</h3>
-                    <p>Web-based app for quick collection of coordinates of any point and local UTM zone. The app
-                        supports coordinate transformations.</p>
-                </div>
-            </div>
+        <div class="projects-slider">
+            <div class="slider-container">
+                <div class="slider-wrapper">
+                    <!-- Project slides -->
+                    <div class="slide">
+                        <div class="project-card">
+                            <img src="assets/projects/click4coords.png" alt="Click 4 Coordinates" class="project-image">
+                            <div class="project-info">
+                                <h3>Click 4 Coordinates</h3>
+                                <p>Web-based app for quick collection of coordinates of any point and local UTM zone. The app
+                                    supports coordinate transformations.</p>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="project-card">
-                <img src="assets/projects/statq.png" alt="StatQ" class="project-image">
-                <div class="project-info">
-                    <h3>StatQ</h3>
-                    <p>Stream data analysis tool. View water level and flow data with characteristic values such as
-                        annual mean, winter median max, etc. Includes automatic QH curve generation and comparison
-                        capabilities.</p>
-                </div>
-            </div>
+                    <div class="slide">
+                        <div class="project-card">
+                            <img src="assets/projects/statq.png" alt="StatQ" class="project-image">
+                            <div class="project-info">
+                                <h3>StatQ</h3>
+                                <p>Stream data analysis tool. View water level and flow data with characteristic values such as
+                                    annual mean, winter median max, etc. Includes automatic QH curve generation and comparison
+                                    capabilities.</p>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="project-card">
-                <img src="assets/projects/easyencrypt.png" alt="EasyEncrypt" class="project-image">
-                <div class="project-info">
-                    <h3>EasyEncrypt</h3>
-                    <p>Password-based encryption app to perform binary encrypt of any file using a private key.</p>
+                    <div class="slide">
+                        <div class="project-card">
+                            <img src="assets/projects/magicc.png" alt="MAGICC" class="project-image">
+                            <div class="project-info">
+                                <h3>MAGICC</h3>
+                                <p>A Web GIS Platform for geospatial overview and analysis.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="project-card">
-                <img src="assets/projects/magicc.png" alt="MAGICC" class="project-image">
-                <div class="project-info">
-                    <h3>MAGICC</h3>
-                    <p>A Web GIS Platform for geospatial overview and analysis.</p>
+                <!-- Navigation arrows -->
+                <button class="slider-nav prev-button"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-nav next-button"><i class="fas fa-chevron-right"></i></button>
+
+                <!-- Dots indicator -->
+                <div class="slider-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                    <span class="dot" data-slide="3"></span>
                 </div>
             </div>
         </div>
@@ -134,7 +149,7 @@
                     <h3>Project Engineer</h3>
                     <h4>SR Batymetri</h4>
                     <p>Following my master's I joined a start-up engaged in river surveying and modelling discharge
-                        capacity to assess the whether required hydraulic conditions were met.</p>
+                        capacity to assess whether required hydraulic conditions were met.</p>
                     <p><strong>Primary tools and software:</strong> Python, HEC-RAS, Excel and QGIS.</p>
                 </div>
             </div>
@@ -276,5 +291,8 @@
         </div>
     </div>
 </footer>
+
+<!-- Project slider script -->
+<script src="js/slider.js"></script>
 </body>
 </html>
