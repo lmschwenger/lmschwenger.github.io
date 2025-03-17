@@ -90,7 +90,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Optional: Automatic slide change - uncomment if you want auto-rotation
-  /*
   const autoSlideInterval = 5000; // 5 seconds
 
   let slideInterval = setInterval(function() {
@@ -107,5 +106,4 @@ document.addEventListener('DOMContentLoaded', function() {
       goToSlide(currentSlide + 1);
     }, autoSlideInterval);
   });
-  */
 });
