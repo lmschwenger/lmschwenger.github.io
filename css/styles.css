@@ -465,3 +465,69 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* Updated Timeline Styles */
+.timeline-header {
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.timeline-header:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-header h3 {
+  margin: 5px 0;
+  color: var(--primary-color);
+}
+
+.timeline-header h4 {
+  margin: 0;
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+
+.expand-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--accent-color);
+  transition: transform 0.3s ease;
+}
+
+.timeline-content {
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  background-color: white;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  margin-top: -5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content.expanded {
+  padding: 20px;
+  max-height: 500px; /* Adjust as needed */
+}
+
+.timeline-content ul {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.timeline-content li {
+  margin-bottom: 8px;
+}
+
+/* Remove the .timeline-content class from the original CSS
+   since we're replacing it with our new implementation */
