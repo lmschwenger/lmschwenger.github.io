@@ -16,14 +16,38 @@
 </head>
 <body>
 <!-- Header -->
+<!-- Updated Header with Navigation -->
 <header>
-<nav class="main-nav">
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#publications">Publications</a>
-    <a href="#courses">Courses</a>
-</nav>
+    <div class="container">
+        <div class="header-content">
+            <a href="#" class="logo">Lasse M. S.</a>
+            <nav class="main-nav">
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#publications">Publications</a>
+                <a href="#courses">Courses</a>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
 </header>
+
+<!-- Mobile Navigation Menu (appears when toggle is clicked) -->
+<div class="mobile-nav">
+    <nav>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#courses">Courses</a>
+    </nav>
+</div>
+
+<!-- Back to Top Button -->
+<button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+</button>
 
 <!-- Hero Section -->
 <section class="hero">
@@ -326,5 +350,6 @@
 <!-- Project slider script -->
 <script src="js/slider.js"></script>
 <script src="js/timeline.js"></script>
+<script src="js/navigation.js"></script>
 </body>
 </html>
