@@ -336,6 +336,50 @@ section:nth-child(even) {
   font-weight: 600;
 }
 
+/* Timeline Toggler */
+.timeline-toggle {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.toggle-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.toggle-button:hover {
+  background-color: var(--accent-color);
+}
+
+.toggle-button i {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.toggle-button.active i {
+  transform: rotate(180deg);
+}
+
+/* Hidden Timeline Container */
+.timeline-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.timeline-container.expanded {
+  max-height: 2000px; /* Adjust based on your content */
+}
+
 /* Publications */
 .publications-list {
   margin-top: 30px;
@@ -776,4 +820,180 @@ footer {
   font-size: 0.75rem;
   padding: 3px 8px;
   border-radius: 4px;
+}
+
+/* Horizontal Timeline Styles */
+.horizontal-timeline {
+  position: relative;
+  margin: 40px 0;
+  overflow: hidden;
+}
+
+.timeline-wrapper {
+  position: relative;
+  padding: 20px 0;
+}
+
+/* Timeline track */
+.timeline-track {
+  position: relative;
+  height: 4px;
+  background-color: #e0e0e0;
+  margin: 0 50px;
+}
+
+.timeline-track::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg,
+    rgba(52, 152, 219, 0.8) 0%,
+    rgba(52, 152, 219, 0.4) 100%);
+  transform-origin: left;
+  transform: scaleX(0.5); /* Adjust based on current position in timeline */
+}
+
+/* Timeline points */
+.timeline-points {
+  display: flex;
+  position: relative;
+  margin: 0 50px;
+}
+
+.timeline-point {
+  position: absolute;
+  transform: translateX(-50%);
+  bottom: 0;
+  cursor: pointer;
+}
+
+.point-marker {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px var(--accent-color);
+  position: relative;
+  top: -6px;
+  transition: all 0.3s ease;
+}
+
+.timeline-point.active .point-marker {
+  background-color: var(--primary-color);
+  transform: scale(1.2);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+}
+
+.point-date {
+  font-size: 0.85rem;
+  color: var(--text-color);
+  position: absolute;
+  bottom: 20px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+/* Timeline content area */
+.timeline-content-area {
+  position: relative;
+  min-height: 200px;
+  margin-top: 40px;
+  overflow: hidden;
+}
+
+.timeline-content-item {
+  position: absolute;
+  width: 100%;
+  padding: 25px;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+
+.timeline-content-item.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  position: relative;
+}
+
+.timeline-content-header {
+  margin-bottom: 15px;
+}
+
+.timeline-content-header h3 {
+  margin: 0 0 5px 0;
+  color: var(--primary-color);
+}
+
+.timeline-content-header h4 {
+  margin: 0;
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
+.timeline-content-body ul {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.timeline-content-body li {
+  margin-bottom: 8px;
+}
+
+/* Navigation buttons */
+.timeline-nav {
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.timeline-nav:hover {
+  background-color: var(--accent-color);
+  transform: scale(1.1);
+}
+
+.timeline-nav.prev {
+  left: 5px;
+}
+
+.timeline-nav.next {
+  right: 5px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .timeline-point .point-date {
+    font-size: 0.75rem;
+    bottom: 15px;
+  }
+
+  .timeline-track, .timeline-points {
+    margin: 0 25px;
+  }
+
+  .timeline-nav {
+    width: 30px;
+    height: 30px;
+  }
 }

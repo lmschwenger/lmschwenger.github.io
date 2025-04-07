@@ -141,111 +141,142 @@
     </div>
 </section>
 <!-- Experience and Education Timeline Section -->
+<!-- Experience and Education Timeline Section -->
 <section id="experience">
     <div class="container">
         <h2 class="section-title">Experience & Education</h2>
-        <div class="timeline">
-            <!-- Remote Sensing Specialist -->
-            <div class="timeline-item">
-                <div class="timeline-header" onclick="toggleTimelineContent(this)">
-                    <span class="timeline-date">December 2022 - Present</span>
-                    <h3>Remote Sensing Specialist</h3>
-                    <h4>Danish Geodata Agency</h4>
-                    <span class="expand-icon"><i class="fas fa-chevron-down"></i></span>
+
+        <!-- Horizontal Timeline -->
+        <div class="horizontal-timeline">
+            <div class="timeline-wrapper">
+                <!-- Navigation buttons -->
+                <div class="timeline-nav prev">
+                    <i class="fas fa-chevron-left"></i>
                 </div>
-                <div class="timeline-content collapsed">
-                    <p>At DGA, I contribute to innovative geospatial solutions through several key initiatives:</p>
-                    <ul>
-                        <li>Led satellite imagery analysis for the Volta Lake Strategic Sector Project (Ghana),
-                            identifying navigational hazards in flooded rainforest areas using Sentinel-2 and WorldView
-                            imagery
-                        </li>
-                        <li>Contributed to Denmark's Depth Model version 2.0 by developing and implementing
-                            satellite-derived bathymetry integration methodologies
-                        </li>
-                        <li>Develop custom Python tools and QGIS plugins for hydrographic data processing and
-                            visualization
-                        </li>
-                        <li>Manage spatial databases and optimize hydrographic workflows</li>
-                    </ul>
-                    <p><strong>Primary software and tools:</strong> CARIS Base Editor, Python, QGIS, Git,
-                        Jira/Confluence/BitBucket, Sentinel-2 Analysis Tools, WorldView Processing Suite</p>
+                <div class="timeline-nav next">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+
+                <!-- Timeline track -->
+                <div class="timeline-track"></div>
+
+                <!-- Timeline points -->
+                <div class="timeline-points">
+                    <div class="timeline-point" data-index="0" style="left: 0%">
+                        <div class="point-marker"></div>
+                        <div class="point-date">2016</div>
+                    </div>
+                    <div class="timeline-point" data-index="1" style="left: 20%">
+                        <div class="point-marker"></div>
+                        <div class="point-date">2019</div>
+                    </div>
+                    <div class="timeline-point" data-index="2" style="left: 40%">
+                        <div class="point-marker"></div>
+                        <div class="point-date">2021</div>
+                    </div>
+                    <div class="timeline-point" data-index="3" style="left: 60%">
+                        <div class="point-marker"></div>
+                        <div class="point-date">Aug 2022</div>
+                    </div>
+                    <div class="timeline-point active" data-index="4" style="left: 80%">
+                        <div class="point-marker"></div>
+                        <div class="point-date">Dec 2022</div>
+                    </div>
+                    <div class="timeline-point" data-index="5" style="left: 100%">
+                        <div class="point-marker"></div>
+                        <div class="point-date">Present</div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Geospatial Analyst -->
-            <div class="timeline-item">
-                <div class="timeline-header" onclick="toggleTimelineContent(this)">
-                    <span class="timeline-date">August 2022 - December 2022</span>
-                    <h3>Geospatial Analyst</h3>
-                    <h4>Danish Geodata Agency</h4>
-                    <span class="expand-icon"><i class="fas fa-chevron-down"></i></span>
+            <!-- Timeline content area -->
+            <div class="timeline-content-area">
+                <!-- BSc Education -->
+                <div class="timeline-content-item" data-index="0">
+                    <div class="timeline-content-header">
+                        <h3>BSc, Environmental Science</h3>
+                        <h4>Aalborg University (2016-2019)</h4>
+                    </div>
+                    <div class="timeline-content-body">
+                        <p>Studied the fundamentals of environmental science with a focus on water resources and
+                            environmental management.</p>
+                        <p><strong>Key areas of study:</strong> Environmental monitoring, GIS fundamentals, Water quality
+                            assessment, Sustainable resource management</p>
+                    </div>
                 </div>
-                <div class="timeline-content collapsed">
-                    <p>In my previous role as geospatial analyst, I took part in quality assessment and management of
-                        bathymetric data.</p>
-                    <p><strong>Primary software and tools:</strong> CARIS Base Editor, Python, QGIS,
-                        Jira/Confluence/BitBucket.</p>
-                </div>
-            </div>
 
-            <!-- Project Engineer -->
-            <div class="timeline-item">
-                <div class="timeline-header" onclick="toggleTimelineContent(this)">
-                    <span class="timeline-date">June 2021 - June 2022</span>
-                    <h3>Project Engineer</h3>
-                    <h4>SR Batymetri</h4>
-                    <span class="expand-icon"><i class="fas fa-chevron-down"></i></span>
+                <!-- MSc Education -->
+                <div class="timeline-content-item" data-index="1">
+                    <div class="timeline-content-header">
+                        <h3>MSc, Water & Environmental Engineering</h3>
+                        <h4>Aalborg University (2019-2021)</h4>
+                    </div>
+                    <div class="timeline-content-body">
+                        <p>My Master's thesis focused on open channel hydraulics, where I developed a 1D steady state flow
+                            model using Python. The research included a comparative analysis of Hydraulic Radius versus
+                            Resistance Radius in Manning number calculations, which resulted in my first academic
+                            publication.</p>
+                        <p><strong>Key skills developed:</strong> Hydraulic modeling, Python programming, Open channel flow
+                            analysis, Academic writing</p>
+                    </div>
                 </div>
-                <div class="timeline-content collapsed">
-                    <p>As part of this hydraulics consulting start-up, I:</p>
-                    <ul>
-                        <li>Conducted comprehensive river surveys using RTK GPS and downscan sonar equipment</li>
-                        <li>Created detailed hydraulic models to assess discharge capacity and regulatory compliance
-                        </li>
-                        <li>Developed efficient data processing workflows combining field measurements with
-                            computational modeling
-                        </li>
-                        <li>Delivered technical reports and recommendations to stakeholders on river hydraulic
-                            performance
-                        </li>
-                    </ul>
-                    <p><strong>Primary tools and software:</strong> Python, HEC-RAS, Excel, QGIS, RTK GPS, Sonar
-                        equipment</p>
-                </div>
-            </div>
 
-            <!-- MSc Education -->
-            <div class="timeline-item">
-                <div class="timeline-header" onclick="toggleTimelineContent(this)">
-                    <span class="timeline-date">2019 - 2021</span>
-                    <h3>MSc, Water & Environmental Engineering</h3>
-                    <h4>Aalborg University</h4>
-                    <span class="expand-icon"><i class="fas fa-chevron-down"></i></span>
+                <!-- Project Engineer -->
+                <div class="timeline-content-item" data-index="2">
+                    <div class="timeline-content-header">
+                        <h3>Project Engineer</h3>
+                        <h4>SR Batymetri (June 2021-June 2022)</h4>
+                    </div>
+                    <div class="timeline-content-body">
+                        <p>As part of this hydraulics consulting start-up, I:</p>
+                        <ul>
+                            <li>Conducted comprehensive river surveys using RTK GPS and downscan sonar equipment</li>
+                            <li>Created detailed hydraulic models to assess discharge capacity and regulatory compliance</li>
+                            <li>Developed efficient data processing workflows combining field measurements with
+                                computational modeling</li>
+                            <li>Delivered technical reports and recommendations to stakeholders on river hydraulic
+                                performance</li>
+                        </ul>
+                        <p><strong>Primary tools and software:</strong> Python, HEC-RAS, Excel, QGIS, RTK GPS, Sonar
+                            equipment</p>
+                    </div>
                 </div>
-                <div class="timeline-content collapsed">
-                    <p>My Master's thesis focused on open channel hydraulics, where I developed a 1D steady state flow
-                        model using Python. The research included a comparative analysis of Hydraulic Radius versus
-                        Resistance Radius in Manning number calculations, which resulted in my first academic
-                        publication.</p>
-                    <p><strong>Key skills developed:</strong> Hydraulic modeling, Python programming, Open channel flow
-                        analysis, Academic writing</p>
-                </div>
-            </div>
 
-            <!-- BSc Education -->
-            <div class="timeline-item">
-                <div class="timeline-header" onclick="toggleTimelineContent(this)">
-                    <span class="timeline-date">2016 - 2019</span>
-                    <h3>BSc, Environmental Science</h3>
-                    <h4>Aalborg University</h4>
-                    <span class="expand-icon"><i class="fas fa-chevron-down"></i></span>
+                <!-- Geospatial Analyst -->
+                <div class="timeline-content-item" data-index="3">
+                    <div class="timeline-content-header">
+                        <h3>Geospatial Analyst</h3>
+                        <h4>Danish Geodata Agency (Aug 2022-Dec 2022)</h4>
+                    </div>
+                    <div class="timeline-content-body">
+                        <p>In my previous role as geospatial analyst, I took part in quality assessment and management of
+                            bathymetric data.</p>
+                        <p><strong>Primary software and tools:</strong> CARIS Base Editor, Python, QGIS,
+                            Jira/Confluence/BitBucket.</p>
+                    </div>
                 </div>
-                <div class="timeline-content collapsed">
-                    <p>Studied the fundamentals of environmental science with a focus on water resources and
-                        environmental management.</p>
-                    <p><strong>Key areas of study:</strong> Environmental monitoring, GIS fundamentals, Water quality
-                        assessment, Sustainable resource management</p>
+
+                <!-- Remote Sensing Specialist -->
+                <div class="timeline-content-item active" data-index="4">
+                    <div class="timeline-content-header">
+                        <h3>Remote Sensing Specialist</h3>
+                        <h4>Danish Geodata Agency (Dec 2022-Present)</h4>
+                    </div>
+                    <div class="timeline-content-body">
+                        <p>At DGA, I contribute to innovative geospatial solutions through several key initiatives:</p>
+                        <ul>
+                            <li>Led satellite imagery analysis for the Volta Lake Strategic Sector Project (Ghana),
+                                identifying navigational hazards in flooded rainforest areas using Sentinel-2 and WorldView
+                                imagery</li>
+                            <li>Contributed to Denmark's Depth Model version 2.0 by developing and implementing
+                                satellite-derived bathymetry integration methodologies</li>
+                            <li>Develop custom Python tools and QGIS plugins for hydrographic data processing and
+                                visualization</li>
+                            <li>Manage spatial databases and optimize hydrographic workflows</li>
+                        </ul>
+                        <p><strong>Primary software and tools:</strong> CARIS Base Editor, Python, QGIS, Git,
+                            Jira/Confluence/BitBucket, Sentinel-2 Analysis Tools, WorldView Processing Suite</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -278,7 +309,8 @@
                     <div class="cert-provider">
                         <i class="fas fa-university"></i> DeepLearning.AI / Coursera
                     </div>
-                    <a href="https://coursera.org/share/13e62101b635ffdadefb65a4e07b2a57" target="_blank" class="cert-link">
+                    <a href="https://coursera.org/share/13e62101b635ffdadefb65a4e07b2a57" target="_blank"
+                       class="cert-link">
                         View Certificate <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>
@@ -293,7 +325,8 @@
                     <div class="cert-provider">
                         <i class="fas fa-university"></i> DeepLearning.AI / Coursera
                     </div>
-                    <a href="https://coursera.org/share/b78e77e152ca02a259ce8702fe2b214b" target="_blank" class="cert-link">
+                    <a href="https://coursera.org/share/b78e77e152ca02a259ce8702fe2b214b" target="_blank"
+                       class="cert-link">
                         View Certificate <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>
@@ -308,7 +341,8 @@
                     <div class="cert-provider">
                         <i class="fas fa-university"></i> DeepLearning.AI / Coursera
                     </div>
-                    <a href="https://coursera.org/share/e8e3827f51dddaed4ed639c140c00f80" target="_blank" class="cert-link">
+                    <a href="https://coursera.org/share/e8e3827f51dddaed4ed639c140c00f80" target="_blank"
+                       class="cert-link">
                         View Certificate <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>
@@ -323,7 +357,8 @@
                     <div class="cert-provider">
                         <i class="fas fa-university"></i> DeepLearning.AI / Coursera
                     </div>
-                    <a href="https://coursera.org/share/48dc9f17781392bd093d89bd98a10d8b" target="_blank" class="cert-link">
+                    <a href="https://coursera.org/share/48dc9f17781392bd093d89bd98a10d8b" target="_blank"
+                       class="cert-link">
                         View Certificate <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>
@@ -338,7 +373,8 @@
                     <div class="cert-provider">
                         <i class="fas fa-university"></i> DeepLearning.AI / Coursera
                     </div>
-                    <a href="https://coursera.org/share/76baa28fbbc3841fac680f1018ae54c1" target="_blank" class="cert-link">
+                    <a href="https://coursera.org/share/76baa28fbbc3841fac680f1018ae54c1" target="_blank"
+                       class="cert-link">
                         View Certificate <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>
@@ -354,7 +390,8 @@
                     <div class="cert-provider">
                         <i class="fas fa-university"></i> Stanford University / Coursera
                     </div>
-                    <a href="https://coursera.org/share/775b510dfd31325455305f7c136d8902" target="_blank" class="cert-link">
+                    <a href="https://coursera.org/share/775b510dfd31325455305f7c136d8902" target="_blank"
+                       class="cert-link">
                         View Certificate <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>
@@ -369,7 +406,8 @@
                     <div class="cert-provider">
                         <i class="fas fa-university"></i> University of California San Diego / Coursera
                     </div>
-                    <a href="https://coursera.org/share/fe74791487228a5cf60849b941654ae2" target="_blank" class="cert-link">
+                    <a href="https://coursera.org/share/fe74791487228a5cf60849b941654ae2" target="_blank"
+                       class="cert-link">
                         View Certificate <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>
@@ -384,7 +422,8 @@
                     <div class="cert-provider">
                         <i class="fas fa-university"></i> University of California San Diego / Coursera
                     </div>
-                    <a href="https://coursera.org/share/fd993f3faca87803c15e8f260a5ae9e9" target="_blank" class="cert-link">
+                    <a href="https://coursera.org/share/fd993f3faca87803c15e8f260a5ae9e9" target="_blank"
+                       class="cert-link">
                         View Certificate <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>
@@ -400,7 +439,8 @@
                     <div class="cert-provider">
                         <i class="fas fa-university"></i> Google / Coursera
                     </div>
-                    <a href="https://coursera.org/share/0777255f6cc895c13837d8d8d08b4b6b" target="_blank" class="cert-link">
+                    <a href="https://coursera.org/share/0777255f6cc895c13837d8d8d08b4b6b" target="_blank"
+                       class="cert-link">
                         View Certificate <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>
@@ -415,7 +455,8 @@
                     <div class="cert-provider">
                         <i class="fas fa-university"></i> Google / Coursera
                     </div>
-                    <a href="https://coursera.org/share/1e303b50432b9aa1dfdd6efa6d76fec4" target="_blank" class="cert-link">
+                    <a href="https://coursera.org/share/1e303b50432b9aa1dfdd6efa6d76fec4" target="_blank"
+                       class="cert-link">
                         View Certificate <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>
