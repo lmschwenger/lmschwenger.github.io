@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <!-- Background circle -->
+  <circle cx="128" cy="128" r="120" fill="#f0f8ff" stroke="#308cc6" stroke-width="8"/>
+  
+  <!-- Sand dune silhouette with clipping -->
+  <clipPath id="circleClip">
+    <circle cx="128" cy="128" r="116"/>
+  </clipPath>
+  
+  <g clip-path="url(#circleClip)">
+    <!-- Sand dune silhouette -->
+    <path d="M 20 180
+             C 50 160, 90 140, 128 160
+             C 166 180, 206 160, 236 180
+             L 236 220 
+             L 40 270
+             Z" 
+          fill="#e6c78e" stroke="#c5a573" stroke-width="2"/>
+    
+    <!-- Second dune layer for depth -->
+    <path d="M 20 190 
+             C 50 170, 90 150, 128 170 
+             C 166 190, 206 170, 236 190
+             L 236 220
+             L 20 220
+             Z" 
+          fill="#d4b47b" opacity="0.7"/>
+    
+    <!-- Small vegetation dots on dunes -->
+    <circle cx="80" cy="175" r="3" fill="#7cb342"/>
+    <circle cx="100" cy="165" r="3" fill="#7cb342"/>
+    <circle cx="150" cy="175" r="3" fill="#7cb342"/>
+    <circle cx="170" cy="165" r="3" fill="#7cb342"/>
+  </g>
+  
+  <!-- Radar/monitoring waves -->
+  <g transform="translate(128, 100)">
+    <!-- Satellite/sensor point -->
+    <circle cx="0" cy="0" r="8" fill="#308cc6"/>
+    
+    <!-- Radar waves -->
+    <path d="M -30 20 A 40 40 0 0 0 30 20" fill="none" stroke="#308cc6" stroke-width="4" opacity="0.8"/>
+    <path d="M -45 30 A 60 60 0 0 0 45 30" fill="none" stroke="#308cc6" stroke-width="4" opacity="0.6"/>
+    <path d="M -60 40 A 80 80 0 0 0 60 40" fill="none" stroke="#308cc6" stroke-width="4" opacity="0.4"/>
+  </g>
+</svg>

@@ -4,478 +4,625 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lasse M.S. - Remote Sensing Specialist</title>
-    <meta name="description" content="Remote sensing specialist and civil engineer focused on satellite data analysis, hydrographic modeling, and Python development.">
-    
+    <meta name="description"
+          content="Remote sensing specialist and civil engineer focused on satellite data analysis, hydrographic modeling, and Python development.">
+
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <div class="logo">Lasse M.S.</div>
-            <ul class="nav-links">
-                <li><a href="#expertise">Expertise</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#journey">Journey</a></li>
-                <li><a href="#publications">Research</a></li>
-            </ul>
-            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
-                <i class="fas fa-bars"></i>
-            </button>
+<!-- Header -->
+<header class="header">
+    <nav class="nav">
+        <div class="logo">Lasse M.S.</div>
+        <ul class="nav-links">
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#journey">Journey</a></li>
+            <li><a href="#publications">Research</a></li>
+        </ul>
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+</header>
+
+<!-- Mobile Navigation -->
+<div class="mobile-nav">
+    <div class="mobile-nav-content">
+        <button class="mobile-close" aria-label="Close menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav>
+            <a href="#expertise">Expertise</a>
+            <a href="#projects">Projects</a>
+            <a href="#journey">Journey</a>
+            <a href="#publications">Research</a>
         </nav>
-    </header>
+    </div>
+</div>
 
-    <!-- Mobile Navigation -->
-    <div class="mobile-nav">
-        <div class="mobile-nav-content">
-            <button class="mobile-close" aria-label="Close menu">
-                <i class="fas fa-times"></i>
-            </button>
-            <nav>
-                <a href="#expertise">Expertise</a>
-                <a href="#projects">Projects</a>
-                <a href="#journey">Journey</a>
-                <a href="#publications">Research</a>
-            </nav>
+<!-- Floating Social -->
+<div class="social-float">
+    <a href="https://github.com/lmschwenger" class="social-link" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+    </a>
+    <a href="https://linkedin.com/in/lasse-schwenger" class="social-link" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+    </a>
+</div>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1>Remote Sensing Specialist</h1>
+            <p class="hero-subtitle">
+                Transforming satellite data into actionable insights for hydrographic and environmental applications at
+                the Danish Geodata Agency.
+            </p>
+            <div class="hero-tags">
+                <span class="tag">Python Development</span>
+                <span class="tag">Satellite Analysis</span>
+                <span class="tag">GIS Solutions</span>
+                <span class="tag">Hydrographic Modeling</span>
+            </div>
+            <div class="hero-cta">
+                <a href="#projects" class="btn-primary">View Projects</a>
+                <a href="#journey" class="btn-secondary">My Journey</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="assets/profile-image.jpg" alt="Lasse M.S." class="profile-img">
+            <div class="image-glow"></div>
         </div>
     </div>
+</section>
 
-    <!-- Floating Social -->
-    <div class="social-float">
-        <a href="https://github.com/lmschwenger" class="social-link" target="_blank" rel="noopener">
-            <i class="fab fa-github"></i>
-        </a>
-        <a href="https://linkedin.com/in/lasse-schwenger" class="social-link" target="_blank" rel="noopener">
-            <i class="fab fa-linkedin"></i>
-        </a>
+<!-- Core Expertise -->
+<section id="expertise" class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Core Expertise</h2>
+            <p class="section-subtitle">Specialized in remote sensing applications and hydrographic data processing</p>
+        </div>
+
+        <div class="expertise-grid">
+            <div class="expertise-card" data-aos="fade-up">
+                <div class="card-icon">
+                    <i class="fas fa-satellite"></i>
+                </div>
+                <h3>Remote Sensing & Satellite Analysis</h3>
+                <p>Advanced processing of Sentinel-2 and WorldView imagery for environmental monitoring and navigation
+                    hazard detection in complex water systems.</p>
+            </div>
+
+            <div class="expertise-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-icon">
+                    <i class="fas fa-water"></i>
+                </div>
+                <h3>Bathymetric & Hydrographic Modeling</h3>
+                <p>Depth model integration, satellite-derived bathymetry, and open channel hydraulics analysis for
+                    marine and freshwater environments.</p>
+            </div>
+
+            <div class="expertise-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-icon">
+                    <i class="fab fa-python"></i>
+                </div>
+                <h3>Python Development & GIS Automation</h3>
+                <p>Custom tools, QGIS plugins, and automated workflows for hydrographic data processing and geospatial
+                    analysis.</p>
+            </div>
+        </div>
     </div>
+</section>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Remote Sensing Specialist</h1>
-                <p class="hero-subtitle">
-                    Transforming satellite data into actionable insights for hydrographic and environmental applications at the Danish Geodata Agency.
-                </p>
-                <div class="hero-tags">
-                    <span class="tag">Python Development</span>
-                    <span class="tag">Satellite Analysis</span>
-                    <span class="tag">GIS Solutions</span>
-                    <span class="tag">Hydrographic Modeling</span>
-                </div>
-                <div class="hero-cta">
-                    <a href="#projects" class="btn-primary">View Projects</a>
-                    <a href="#journey" class="btn-secondary">My Journey</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="assets/profile-image.jpg" alt="Lasse M.S." class="profile-img">
-                <div class="image-glow"></div>
-            </div>
+<!-- Projects Section -->
+<section id="projects" class="section section-alt">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Innovative solutions bridging technology and environmental science</p>
         </div>
-    </section>
 
-    <!-- Core Expertise -->
-    <section id="expertise" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Core Expertise</h2>
-                <p class="section-subtitle">Specialized in remote sensing applications and hydrographic data processing</p>
-            </div>
-            
-            <div class="expertise-grid">
-                <div class="expertise-card" data-aos="fade-up">
-                    <div class="card-icon">
-                        <i class="fas fa-satellite"></i>
+        <div class="projects-grid">
+            <div class="project-card" data-aos="fade-up"> <!-- SAMBUCA -->
+                <div class="project-image">
+                    <img src="assets/projects/sambuca_gui.png" alt="SAMBUCA GUI" loading="lazy">
+                    <div class="project-overlay">
+                        <span class="project-type">Bathymetric Analysis</span>
                     </div>
-                    <h3>Satellite Analysis</h3>
-                    <p>Advanced processing of Sentinel-2 and WorldView imagery for environmental monitoring and navigation hazard detection in complex water systems.</p>
                 </div>
-                
-                <div class="expertise-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card-icon">
-                        <i class="fab fa-python"></i>
+                <div class="project-header" onclick="toggleProjectItem(this)">
+                    <div class="project-title-section">
+                        <h3>SAMBUCA GUI</h3>
+                        <p class="project-summary">Graphical interface for CSIRO's bathymetric model</p>
                     </div>
-                    <h3>Python Development</h3>
-                    <p>Custom tools and QGIS plugins for hydrographic data processing, spatial analysis, and workflow optimization in scientific applications.</p>
+                    <div class="project-expand-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
                 </div>
-                
-                <div class="expertise-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card-icon">
-                        <i class="fas fa-water"></i>
+                <div class="project-content">
+                    <p>Graphical interface for CSIRO's Semi-Analytical Model for Bathymetry, Unmixing and Concentration Assessment, enabling advanced water column analysis and bathymetric modeling.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Remote Sensing</span>
+                        <span>Bathymetric Modeling</span>
                     </div>
-                    <h3>Hydrographic Modeling</h3>
-                    <p>Depth model integration, bathymetric data management, and open channel hydraulics analysis for marine and freshwater environments.</p>
-                </div>
-                
-                <div class="expertise-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card-icon">
-                        <i class="fas fa-map-marked-alt"></i>
+                    <div class="project-actions">
+                        <a href="https://github.com/lmschwenger/sambuca-gui" target="_blank" rel="noopener" class="project-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
                     </div>
-                    <h3>GIS Solutions</h3>
-                    <p>Spatial database management, custom QGIS workflows, and geospatial visualization for complex environmental datasets.</p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section section-alt">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Innovative solutions bridging technology and environmental science</p>
-            </div>
-            
-            <div class="projects-grid">
-                <div class="project-card" data-aos="fade-up">
-                    <div class="project-image">
-                        <img src="assets/projects/shore.png" alt="SHORE Platform" loading="lazy">
-                        <div class="project-overlay">
-                            <span class="project-type">Satellite Analysis</span>
-                        </div>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100"> <!-- Coastal Change Detection -->
+                <div class="project-image">
+                    <img src="assets/projects/dune_monitor.svg" alt="Coastal Change Detection" loading="lazy">
+                    <div class="project-overlay">
+                        <span class="project-type">Change Detection</span>
                     </div>
-                    <div class="project-info">
+                </div>
+                <div class="project-header" onclick="toggleProjectItem(this)">
+                    <div class="project-title-section">
+                        <h3>Coastal Change Detection</h3>
+                        <p class="project-summary">Automated coastal monitoring using satellite imagery</p>
+                    </div>
+                    <div class="project-expand-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <p>Automated coastal monitoring system using satellite imagery to detect and quantify dune and shoreline changes over time for environmental assessment.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Change Detection</span>
+                        <span>Coastal Monitoring</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/lmschwenger/coastal-cd" target="_blank" rel="noopener" class="project-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200"> <!-- SHORE -->
+                <div class="project-image">
+                    <img src="assets/projects/shore.png" alt="SHORE Platform" loading="lazy">
+                    <div class="project-overlay">
+                        <span class="project-type">Satellite Analysis</span>
+                    </div>
+                </div>
+                <div class="project-header" onclick="toggleProjectItem(this)">
+                    <div class="project-title-section">
                         <h3>SHORE</h3>
-                        <p>Sentinel Hydrological Observation & Resource Explorer - integrated platform for satellite imagery search with real-time water level data from DMI.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Sentinel-2</span>
-                            <span>API Integration</span>
-                        </div>
+                        <p class="project-summary">Sentinel Hydrological Observation & Resource Explorer</p>
+                    </div>
+                    <div class="project-expand-icon">
+                        <i class="fas fa-chevron-down"></i>
                     </div>
                 </div>
-                
-                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-image">
-                        <img src="assets/projects/click4coords.png" alt="Click 4 Coordinates" loading="lazy">
-                        <div class="project-overlay">
-                            <span class="project-type">Web Application</span>
-                        </div>
+                <div class="project-content">
+                    <p>Sentinel Hydrological Observation & Resource Explorer - integrated platform for satellite imagery search with real-time water level data from DMI.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Sentinel-2</span>
+                        <span>API Integration</span>
                     </div>
-                    <div class="project-info">
-                        <h3>Click 4 Coordinates</h3>
-                        <p>Web-based coordinate collection tool with automatic UTM zone detection and comprehensive coordinate transformation capabilities.</p>
-                        <div class="project-tech">
-                            <span>JavaScript</span>
-                            <span>Mapping APIs</span>
-                            <span>Coordinate Systems</span>
-                        </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/lmschwenger/shore" target="_blank" rel="noopener" class="project-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
                     </div>
                 </div>
-                
-                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-image">
-                        <img src="assets/projects/statq.png" alt="StatQ Analysis Tool" loading="lazy">
-                        <div class="project-overlay">
-                            <span class="project-type">Data Analysis</span>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>StatQ</h3>
-                        <p>Comprehensive stream data analysis platform featuring automated QH curve generation and advanced comparison tools for hydrological research.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Data Visualization</span>
-                            <span>Statistical Analysis</span>
-                        </div>
-                    </div>
-                </div>
+            </div>
 
-                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="project-image">
-                        <img src="assets/projects/magicc.png" alt="MAGICC Platform" loading="lazy">
-                        <div class="project-overlay">
-                            <span class="project-type">Web GIS</span>
-                        </div>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300"> <!-- Click4Coords -->
+                <div class="project-image">
+                    <img src="assets/projects/click4coords.png" alt="Click 4 Coordinates" loading="lazy">
+                    <div class="project-overlay">
+                        <span class="project-type">Web Application</span>
                     </div>
-                    <div class="project-info">
+                </div>
+                <div class="project-header" onclick="toggleProjectItem(this)">
+                    <div class="project-title-section">
+                        <h3>Click 4 Coordinates</h3>
+                        <p class="project-summary">Web-based coordinate collection with UTM detection</p>
+                    </div>
+                    <div class="project-expand-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <p>Web-based coordinate collection tool with automatic UTM zone detection and comprehensive coordinate transformation capabilities.</p>
+                    <div class="project-tech">
+                        <span>JavaScript</span>
+                        <span>Mapping APIs</span>
+                        <span>Coordinate Systems</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/lmschwenger/click4coords" target="_blank" rel="noopener" class="project-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="400"> <!-- MAGICC -->
+                <div class="project-image">
+                    <img src="assets/projects/magicc.png" alt="MAGICC Platform" loading="lazy">
+                    <div class="project-overlay">
+                        <span class="project-type">Web GIS</span>
+                    </div>
+                </div>
+                <div class="project-header" onclick="toggleProjectItem(this)">
+                    <div class="project-title-section">
                         <h3>MAGICC</h3>
-                        <p>Modern Web GIS platform providing comprehensive geospatial overview and analysis capabilities for environmental data management.</p>
-                        <div class="project-tech">
-                            <span>Web GIS</span>
-                            <span>Geospatial Analysis</span>
-                            <span>Interactive Mapping</span>
-                        </div>
+                        <p class="project-summary">Modern Web GIS platform for geospatial analysis</p>
+                    </div>
+                    <div class="project-expand-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <p>Modern Web GIS platform providing comprehensive geospatial overview and analysis capabilities for environmental data management.</p>
+                    <div class="project-tech">
+                        <span>Web GIS</span>
+                        <span>Geospatial Analysis</span>
+                        <span>Interactive Mapping</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/lmschwenger/magicc" target="_blank" rel="noopener" class="project-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Professional Journey -->
-    <section id="journey" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Professional Journey</h2>
-                <p class="section-subtitle">From civil engineering foundations to cutting-edge remote sensing applications</p>
-            </div>
-            
-            <div class="journey-timeline">
-                <div class="timeline-item" data-aos="fade-left">
+<!-- Professional Journey -->
+<section id="journey" class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Professional Journey</h2>
+            <p class="section-subtitle">From civil engineering foundations to cutting-edge remote sensing
+                applications</p>
+        </div>
+
+        <div class="journey-timeline">
+            <div class="timeline-item" data-aos="fade-left">
+                <div class="timeline-header" onclick="toggleTimelineItem(this)">
                     <div class="timeline-date">Dec 2022 - Present</div>
-                    <div class="timeline-content">
+                    <div class="timeline-title-section">
                         <h3>Remote Sensing Specialist</h3>
                         <h4>Danish Geodata Agency</h4>
-                        <p>Leading satellite analysis for international projects including Ghana's Volta Lake Strategic Sector Project. Contributing to Denmark's Depth Model v2.0 through innovative satellite-derived bathymetry integration.</p>
-                        <div class="timeline-highlights">
-                            <span>Sentinel-2 Analysis</span>
-                            <span>WorldView Processing</span>
-                            <span>Bathymetric Integration</span>
-                        </div>
+                    </div>
+                    <div class="timeline-expand-icon">
+                        <i class="fas fa-chevron-down"></i>
                     </div>
                 </div>
-                
-                <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-content">
+                    <p>Leading satellite analysis for international projects including Ghana's Volta Lake Strategic
+                        Sector Project. Contributing to Denmark's Depth Model v2.0 through innovative satellite-derived
+                        bathymetry integration.</p>
+                    <div class="timeline-highlights">
+                        <span>Sentinel-2 Analysis</span>
+                        <span>WorldView Processing</span>
+                        <span>Bathymetric Integration</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-header" onclick="toggleTimelineItem(this)">
                     <div class="timeline-date">Aug - Dec 2022</div>
-                    <div class="timeline-content">
+                    <div class="timeline-title-section">
                         <h3>Geospatial Analyst</h3>
                         <h4>Danish Geodata Agency</h4>
-                        <p>Quality assessment and management of bathymetric data using advanced geospatial processing workflows and database optimization techniques.</p>
-                        <div class="timeline-highlights">
-                            <span>CARIS Base Editor</span>
-                            <span>Data Quality Control</span>
-                            <span>Workflow Optimization</span>
-                        </div>
+                    </div>
+                    <div class="timeline-expand-icon">
+                        <i class="fas fa-chevron-down"></i>
                     </div>
                 </div>
-                
-                <div class="timeline-item" data-aos="fade-left">
+                <div class="timeline-content">
+                    <p>Quality assessment and management of bathymetric data using advanced geospatial processing
+                        workflows and database optimization techniques.</p>
+                    <div class="timeline-highlights">
+                        <span>CARIS Base Editor</span>
+                        <span>Data Quality Control</span>
+                        <span>Workflow Optimization</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-aos="fade-left">
+                <div class="timeline-header" onclick="toggleTimelineItem(this)">
                     <div class="timeline-date">June 2021 - June 2022</div>
-                    <div class="timeline-content">
+                    <div class="timeline-title-section">
                         <h3>Project Engineer</h3>
                         <h4>SR Batymetri</h4>
-                        <p>Conducted comprehensive river surveys using RTK GPS and sonar equipment. Developed hydraulic models for discharge capacity assessment and regulatory compliance.</p>
-                        <div class="timeline-highlights">
-                            <span>HEC-RAS Modeling</span>
-                            <span>Field Surveying</span>
-                            <span>Hydraulic Analysis</span>
-                        </div>
+                    </div>
+                    <div class="timeline-expand-icon">
+                        <i class="fas fa-chevron-down"></i>
                     </div>
                 </div>
-                
-                <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-content">
+                    <p>Conducted comprehensive river surveys using RTK GPS and sonar equipment. Developed hydraulic
+                        models for discharge capacity assessment and regulatory compliance.</p>
+                    <div class="timeline-highlights">
+                        <span>HEC-RAS Modeling</span>
+                        <span>Field Surveying</span>
+                        <span>Hydraulic Analysis</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-header" onclick="toggleTimelineItem(this)">
                     <div class="timeline-date">2019 - 2021</div>
-                    <div class="timeline-content">
+                    <div class="timeline-title-section">
                         <h3>MSc, Water & Environmental Engineering</h3>
                         <h4>Aalborg University</h4>
-                        <p>Specialized in open channel hydraulics with Python-based 1D steady-state flow modeling. Research resulted in academic publication on Manning number calculations.</p>
-                        <div class="timeline-highlights">
-                            <span>Hydraulic Modeling</span>
-                            <span>Python Programming</span>
-                            <span>Academic Research</span>
-                        </div>
+                    </div>
+                    <div class="timeline-expand-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="timeline-content">
+                    <p>Specialized in open channel hydraulics with Python-based 1D steady-state flow modeling. Research
+                        resulted in academic publication on Manning number calculations.</p>
+                    <div class="timeline-highlights">
+                        <span>Hydraulic Modeling</span>
+                        <span>Python Programming</span>
+                        <span>Academic Research</span>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Publications & Research -->
-    <section id="publications" class="section section-alt">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Research & Publications</h2>
-                <p class="section-subtitle">Contributing to scientific advancement in remote sensing and hydrographic modeling</p>
-            </div>
-            
-            <div class="publications-grid">
-                <div class="publication-card" data-aos="fade-up">
-                    <div class="publication-header">
-                        <h3>Denmark's Depth Model version 2.0</h3>
-                        <span class="publication-year">2024</span>
-                    </div>
-                    <p class="publication-journal">International Hydrographic Review (IHR)</p>
-                    <p class="publication-description">Improved compilation of bathymetric data within Danish waters using advanced satellite-derived bathymetry integration methodologies.</p>
-                    <div class="publication-authors">Masetti, G. et al.</div>
-                    <a href="https://ihr.iho.int/articles/denmarks-depth-model-version-2-0-improved-compilation-of-bathymetric-data-within-the-danish-waters/" target="_blank" class="publication-link">
-                        <i class="fas fa-external-link-alt"></i> Read Publication
-                    </a>
-                </div>
+<!-- Publications & Research -->
+<section id="publications" class="section section-alt">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Research & Publications</h2>
+            <p class="section-subtitle">Contributing to scientific advancement in remote sensing and hydrographic
+                modeling</p>
+        </div>
 
-                <div class="publication-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="publication-header">
-                        <h3>Satellitbaserede løsninger til kortlægning af lavvandede områder</h3>
-                        <span class="publication-year">2024</span>
-                    </div>
-                    <p class="publication-journal">GeoForum</p>
-                    <p class="publication-description">Exploring satellite-based solutions for shallow water mapping applications in Danish coastal environments.</p>
-                    <div class="publication-authors">Skarpalezos, S., Schwenger, L. M.</div>
-                    <a href="https://issuu.com/geoforum5/docs/geoforum_254" target="_blank" class="publication-link">
-                        <i class="fas fa-external-link-alt"></i> Read Publication
-                    </a>
+        <div class="publications-grid">
+            <div class="publication-card" data-aos="fade-up">
+                <div class="publication-header">
+                    <h3>Denmark's Depth Model version 2.0</h3>
+                    <span class="publication-year">2024</span>
                 </div>
-
-                <div class="publication-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="publication-header">
-                        <h3>Denmark's Depth Model</h3>
-                        <span class="publication-year">2022</span>
-                    </div>
-                    <p class="publication-journal">MDPI Geosciences</p>
-                    <p class="publication-description">Comprehensive compilation methodology for bathymetric data within Danish territorial waters and maritime zones.</p>
-                    <div class="publication-authors">Masetti, G. et al.</div>
-                    <a href="https://www.mdpi.com/2673-7418/2/4/26" target="_blank" class="publication-link">
-                        <i class="fas fa-external-link-alt"></i> Read Publication
-                    </a>
-                </div>
-
-                <div class="publication-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="publication-header">
-                        <h3>Hydraulisk radius eller Modstandsradius?</h3>
-                        <span class="publication-year">2021</span>
-                    </div>
-                    <p class="publication-journal">Vand & Jord</p>
-                    <p class="publication-description">Comparative analysis of Hydraulic Radius versus Resistance Radius in Manning number calculations for open channel flow.</p>
-                    <div class="publication-authors">Larsen, T., Schwenger, L. M.</div>
-                    <a href="https://vand-og-jord.dk/wp-content/uploads/2022/12/VJ-4_21_Hydraulik_s167-168.pdf" target="_blank" class="publication-link">
-                        <i class="fas fa-external-link-alt"></i> Read Publication
-                    </a>
-                </div>
+                <p class="publication-journal">International Hydrographic Review (IHR)</p>
+                <p class="publication-description">Improved compilation of bathymetric data within Danish waters using
+                    advanced satellite-derived bathymetry integration methodologies.</p>
+                <div class="publication-authors">Masetti, G. et al.</div>
+                <a href="https://ihr.iho.int/articles/denmarks-depth-model-version-2-0-improved-compilation-of-bathymetric-data-within-the-danish-waters/"
+                   target="_blank" class="publication-link">
+                    <i class="fas fa-external-link-alt"></i> Read Publication
+                </a>
             </div>
 
-            <!-- Certifications Summary -->
-            <div class="certifications-summary">
-                <h3>Professional Development</h3>
-                <p>Continuously advancing expertise through specialized coursework in AI/ML, computer science, and project management.</p>
-                <div class="cert-categories">
-                    <div class="cert-category">
-                        <h4>AI & Machine Learning</h4>
-                        <span>6 certifications from DeepLearning.AI</span>
-                    </div>
-                    <div class="cert-category">
-                        <h4>Computer Science</h4>
-                        <span>Advanced algorithms and cryptography</span>
-                    </div>
-                    <div class="cert-category">
-                        <h4>Project Management</h4>
-                        <span>Google Project Management fundamentals</span>
-                    </div>
+            <div class="publication-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="publication-header">
+                    <h3>Satellitbaserede løsninger til kortlægning af lavvandede områder</h3>
+                    <span class="publication-year">2024</span>
                 </div>
-                <a href="#" class="view-all-certs" id="show-certs">View All Certifications <i class="fas fa-chevron-down"></i></a>
+                <p class="publication-journal">GeoForum</p>
+                <p class="publication-description">Exploring satellite-based solutions for shallow water mapping
+                    applications in Danish coastal environments.</p>
+                <div class="publication-authors">Skarpalezos, S., Schwenger, L. M.</div>
+                <a href="https://issuu.com/geoforum5/docs/geoforum_254" target="_blank" class="publication-link">
+                    <i class="fas fa-external-link-alt"></i> Read Publication
+                </a>
+            </div>
+
+            <div class="publication-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="publication-header">
+                    <h3>Denmark's Depth Model</h3>
+                    <span class="publication-year">2022</span>
+                </div>
+                <p class="publication-journal">MDPI Geosciences</p>
+                <p class="publication-description">Comprehensive compilation methodology for bathymetric data within
+                    Danish territorial waters and maritime zones.</p>
+                <div class="publication-authors">Masetti, G. et al.</div>
+                <a href="https://www.mdpi.com/2673-7418/2/4/26" target="_blank" class="publication-link">
+                    <i class="fas fa-external-link-alt"></i> Read Publication
+                </a>
+            </div>
+
+            <div class="publication-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="publication-header">
+                    <h3>Hydraulisk radius eller Modstandsradius?</h3>
+                    <span class="publication-year">2021</span>
+                </div>
+                <p class="publication-journal">Vand & Jord</p>
+                <p class="publication-description">Comparative analysis of Hydraulic Radius versus Resistance Radius in
+                    Manning number calculations for open channel flow.</p>
+                <div class="publication-authors">Larsen, T., Schwenger, L. M.</div>
+                <a href="https://vand-og-jord.dk/wp-content/uploads/2022/12/VJ-4_21_Hydraulik_s167-168.pdf"
+                   target="_blank" class="publication-link">
+                    <i class="fas fa-external-link-alt"></i> Read Publication
+                </a>
             </div>
         </div>
-    </section>
 
-    <!-- Detailed Certifications (Hidden by default) -->
-    <section id="certifications" class="section certifications-detailed" style="display: none;">
-        <div class="container">
-            <h2 class="section-title">Certifications & Courses</h2>
-            
-            <div class="cert-filter">
-                <button class="cert-filter-btn active" data-category="all">All</button>
-                <button class="cert-filter-btn" data-category="ai-ml">AI & ML</button>
-                <button class="cert-filter-btn" data-category="cs">Computer Science</button>
-                <button class="cert-filter-btn" data-category="pm">Project Management</button>
+        <!-- Certifications Summary -->
+        <div class="certifications-summary">
+            <h3>Professional Development</h3>
+            <p>Continuously advancing expertise through specialized coursework in AI/ML, computer science, and project
+                management.</p>
+            <div class="cert-categories">
+                <div class="cert-category">
+                    <h4>AI & Machine Learning</h4>
+                    <span>6 certifications from DeepLearning.AI</span>
+                </div>
+                <div class="cert-category">
+                    <h4>Computer Science</h4>
+                    <span>Advanced algorithms and cryptography</span>
+                </div>
+                <div class="cert-category">
+                    <h4>Project Management</h4>
+                    <span>Google Project Management fundamentals</span>
+                </div>
+            </div>
+            <a href="#" class="view-all-certs" id="show-certs">View All Certifications <i
+                    class="fas fa-chevron-down"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- Detailed Certifications (Hidden by default) -->
+<section id="certifications" class="section certifications-detailed" style="display: none;">
+    <div class="container">
+        <h2 class="section-title">Certifications & Courses</h2>
+
+        <div class="cert-filter">
+            <button class="cert-filter-btn active" data-category="all">All</button>
+            <button class="cert-filter-btn" data-category="ai-ml">AI & ML</button>
+            <button class="cert-filter-btn" data-category="cs">Computer Science</button>
+            <button class="cert-filter-btn" data-category="pm">Project Management</button>
+        </div>
+
+        <div class="certifications-grid">
+            <!-- AI & ML Certificates -->
+            <div class="cert-card" data-category="ai-ml">
+                <h4>Convolutional Neural Networks</h4>
+                <span class="cert-provider">DeepLearning.AI / Coursera</span>
+                <a href="https://coursera.org/share/13e62101b635ffdadefb65a4e07b2a57" target="_blank">View
+                    Certificate</a>
             </div>
 
-            <div class="certifications-grid">
-                <!-- AI & ML Certificates -->
-                <div class="cert-card" data-category="ai-ml">
-                    <h4>Convolutional Neural Networks</h4>
-                    <span class="cert-provider">DeepLearning.AI / Coursera</span>
-                    <a href="https://coursera.org/share/13e62101b635ffdadefb65a4e07b2a57" target="_blank">View Certificate</a>
-                </div>
+            <div class="cert-card" data-category="ai-ml">
+                <h4>Neural Networks and Deep Learning</h4>
+                <span class="cert-provider">DeepLearning.AI / Coursera</span>
+                <a href="https://coursera.org/share/b78e77e152ca02a259ce8702fe2b214b" target="_blank">View
+                    Certificate</a>
+            </div>
 
-                <div class="cert-card" data-category="ai-ml">
-                    <h4>Neural Networks and Deep Learning</h4>
-                    <span class="cert-provider">DeepLearning.AI / Coursera</span>
-                    <a href="https://coursera.org/share/b78e77e152ca02a259ce8702fe2b214b" target="_blank">View Certificate</a>
-                </div>
+            <div class="cert-card" data-category="ai-ml">
+                <h4>Improving Deep Neural Networks</h4>
+                <span class="cert-provider">DeepLearning.AI / Coursera</span>
+                <a href="https://coursera.org/share/e8e3827f51dddaed4ed639c140c00f80" target="_blank">View
+                    Certificate</a>
+            </div>
 
-                <div class="cert-card" data-category="ai-ml">
-                    <h4>Improving Deep Neural Networks</h4>
-                    <span class="cert-provider">DeepLearning.AI / Coursera</span>
-                    <a href="https://coursera.org/share/e8e3827f51dddaed4ed639c140c00f80" target="_blank">View Certificate</a>
-                </div>
+            <div class="cert-card" data-category="ai-ml">
+                <h4>Structuring Machine Learning Projects</h4>
+                <span class="cert-provider">DeepLearning.AI / Coursera</span>
+                <a href="https://coursera.org/share/48dc9f17781392bd093d89bd98a10d8b" target="_blank">View
+                    Certificate</a>
+            </div>
 
-                <div class="cert-card" data-category="ai-ml">
-                    <h4>Structuring Machine Learning Projects</h4>
-                    <span class="cert-provider">DeepLearning.AI / Coursera</span>
-                    <a href="https://coursera.org/share/48dc9f17781392bd093d89bd98a10d8b" target="_blank">View Certificate</a>
-                </div>
+            <div class="cert-card" data-category="ai-ml">
+                <h4>Linear Algebra for Machine Learning</h4>
+                <span class="cert-provider">DeepLearning.AI / Coursera</span>
+                <a href="https://coursera.org/share/76baa28fbbc3841fac680f1018ae54c1" target="_blank">View
+                    Certificate</a>
+            </div>
 
-                <div class="cert-card" data-category="ai-ml">
-                    <h4>Linear Algebra for Machine Learning</h4>
-                    <span class="cert-provider">DeepLearning.AI / Coursera</span>
-                    <a href="https://coursera.org/share/76baa28fbbc3841fac680f1018ae54c1" target="_blank">View Certificate</a>
-                </div>
+            <div class="cert-card" data-category="ai-ml">
+                <h4>Calculus for Machine Learning</h4>
+                <span class="cert-provider">DeepLearning.AI / Coursera</span>
+                <a href="https://coursera.org/share/f6b45c0e88c45c48a2eb44711282f99f" target="_blank">View
+                    Certificate</a>
+            </div>
 
-                <div class="cert-card" data-category="ai-ml">
-                    <h4>Calculus for Machine Learning</h4>
-                    <span class="cert-provider">DeepLearning.AI / Coursera</span>
-                    <a href="https://coursera.org/share/f6b45c0e88c45c48a2eb44711282f99f" target="_blank">View Certificate</a>
-                </div>
+            <!-- Computer Science Certificates -->
+            <div class="cert-card" data-category="cs">
+                <h4>Cryptography I</h4>
+                <span class="cert-provider">Stanford University / Coursera</span>
+                <a href="https://coursera.org/share/775b510dfd31325455305f7c136d8902" target="_blank">View
+                    Certificate</a>
+            </div>
 
-                <!-- Computer Science Certificates -->
-                <div class="cert-card" data-category="cs">
-                    <h4>Cryptography I</h4>
-                    <span class="cert-provider">Stanford University / Coursera</span>
-                    <a href="https://coursera.org/share/775b510dfd31325455305f7c136d8902" target="_blank">View Certificate</a>
-                </div>
+            <div class="cert-card" data-category="cs">
+                <h4>Advanced Algorithms & Complexity</h4>
+                <span class="cert-provider">UC San Diego / Coursera</span>
+                <a href="https://coursera.org/share/fe74791487228a5cf60849b941654ae2" target="_blank">View
+                    Certificate</a>
+            </div>
 
-                <div class="cert-card" data-category="cs">
-                    <h4>Advanced Algorithms & Complexity</h4>
-                    <span class="cert-provider">UC San Diego / Coursera</span>
-                    <a href="https://coursera.org/share/fe74791487228a5cf60849b941654ae2" target="_blank">View Certificate</a>
-                </div>
+            <div class="cert-card" data-category="cs">
+                <h4>Algorithms On Graphs</h4>
+                <span class="cert-provider">UC San Diego / Coursera</span>
+                <a href="https://coursera.org/share/fd993f3faca87803c15e8f260a5ae9e9" target="_blank">View
+                    Certificate</a>
+            </div>
 
-                <div class="cert-card" data-category="cs">
-                    <h4>Algorithms On Graphs</h4>
-                    <span class="cert-provider">UC San Diego / Coursera</span>
-                    <a href="https://coursera.org/share/fd993f3faca87803c15e8f260a5ae9e9" target="_blank">View Certificate</a>
-                </div>
+            <!-- Project Management Certificates -->
+            <div class="cert-card" data-category="pm">
+                <h4>Foundations of Project Management</h4>
+                <span class="cert-provider">Google / Coursera</span>
+                <a href="https://coursera.org/share/0777255f6cc895c13837d8d8d08b4b6b" target="_blank">View
+                    Certificate</a>
+            </div>
 
-                <!-- Project Management Certificates -->
-                <div class="cert-card" data-category="pm">
-                    <h4>Foundations of Project Management</h4>
-                    <span class="cert-provider">Google / Coursera</span>
-                    <a href="https://coursera.org/share/0777255f6cc895c13837d8d8d08b4b6b" target="_blank">View Certificate</a>
-                </div>
-
-                <div class="cert-card" data-category="pm">
-                    <h4>Project Initiation: Starting a Successful Project</h4>
-                    <span class="cert-provider">Google / Coursera</span>
-                    <a href="https://coursera.org/share/1e303b50432b9aa1dfdd6efa6d76fec4" target="_blank">View Certificate</a>
-                </div>
+            <div class="cert-card" data-category="pm">
+                <h4>Project Initiation: Starting a Successful Project</h4>
+                <span class="cert-provider">Google / Coursera</span>
+                <a href="https://coursera.org/share/1e303b50432b9aa1dfdd6efa6d76fec4" target="_blank">View
+                    Certificate</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3>Lasse M. Schwenger</h3>
-                    <p>Remote Sensing Specialist | Danish Geodata Agency</p>
-                </div>
-                <div class="footer-links">
-                    <a href="https://github.com/lmschwenger" target="_blank" rel="noopener">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://linkedin.com/in/lasse-schwenger" target="_blank" rel="noopener">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </div>
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Lasse M. Schwenger</h3>
+                <p>Remote Sensing Specialist | Danish Geodata Agency</p>
             </div>
-            <div class="footer-bottom">
-                <p>© 2025 Lasse M. Schwenger - No Rights Reserved</p>
+            <div class="footer-links">
+                <a href="https://github.com/lmschwenger" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/lasse-schwenger" target="_blank" rel="noopener">
+                    <i class="fab fa-linkedin"></i>
+                </a>
             </div>
         </div>
-    </footer>
+        <div class="footer-bottom">
+            <p>© 2025 Lasse M. Schwenger - No Rights Reserved</p>
+        </div>
+    </div>
+</footer>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
-        <i class="fas fa-chevron-up"></i>
-    </button>
+<!-- Image Lightbox Modal -->
+<div id="lightbox-modal" class="lightbox-modal">
+    <div class="lightbox-content">
+        <button class="lightbox-close" aria-label="Close lightbox">
+            <i class="fas fa-times"></i>
+        </button>
+        <img id="lightbox-image" src="" alt="" class="lightbox-image">
+        <div class="lightbox-caption"></div>
+    </div>
+    <div class="lightbox-overlay"></div>
+</div>
 
-    <!-- Scripts -->
-    <script src="js/main.js"></script>
+<!-- Back to Top Button -->
+<button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<!-- Scripts -->
+<script src="js/main.js"></script>
 </body>
 </html>
