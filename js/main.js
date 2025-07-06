@@ -19,6 +19,8 @@ class PortfolioSite {
         this.initNavigation();
         this.initScrollAnimations();
         this.initCertificates();
+        this.initLightbox();
+        this.initTimelineToggle();
         this.initPerformanceOptimizations();
         this.initAccessibility();
     }
@@ -269,6 +271,127 @@ class PortfolioSite {
         certCards.forEach(card => {
             card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
         });
+    }
+
+    // Image lightbox functionality - simplified version
+    initLightbox() {
+        const modal = document.getElementById('lightbox-modal');
+        const modalImage = document.getElementById('lightbox-image');
+        const modalCaption = document.querySelector('.lightbox-caption');
+        const closeBtn = document.querySelector('.lightbox-close');
+        const overlay = document.querySelector('.lightbox-overlay');
+
+        if (!modal || !modalImage || !closeBtn) return;
+
+        // Simple close function
+        const closeLightbox = () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        // Simple open function
+        const openLightbox = (src, alt, title) => {
+            modalImage.src = src;
+            modalImage.alt = alt;
+            modalCaption.textContent = title;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        };
+
+        // Add click listeners to all project images
+        document.addEventListener('click', (e) => {
+            // Check if clicked element is a project image
+            if (e.target.matches('.project-image img')) {
+                e.preventDefault();
+                
+                const img = e.target;
+                const src = img.getAttribute('src');
+                const alt = img.getAttribute('alt') || '';
+                const projectCard = img.closest('.project-card');
+                const title = projectCard?.querySelector('h3')?.textContent || alt;
+                
+                openLightbox(src, alt, title);
+            }
+        });
+
+        // Close button
+        closeBtn.addEventListener('click', closeLightbox);
+        
+        // Close on overlay click
+        overlay.addEventListener('click', closeLightbox);
+        
+        // Close on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+    }
+
+    // Timeline toggle functionality
+    initTimelineToggle() {
+        // Global function for timeline toggle (called from onclick in HTML)
+        window.toggleTimelineItem = function(headerElement) {
+            const timelineItem = headerElement.closest('.timeline-item');
+            const isExpanded = timelineItem.classList.contains('expanded');
+            
+            if (isExpanded) {
+                timelineItem.classList.remove('expanded');
+            } else {
+                // Close all other timeline items
+                document.querySelectorAll('.timeline-item.expanded').forEach(item => {
+                    item.classList.remove('expanded');
+                });
+                
+                // Open the clicked item
+                timelineItem.classList.add('expanded');
+            }
+        };
+
+        // Global function for project toggle (called from onclick in HTML)
+        window.toggleProjectItem = function(headerElement) {
+            console.log('=== PROJECT TOGGLE START ===');
+            console.log('Header element clicked:', headerElement);
+            
+            const projectCard = headerElement.closest('.project-card');
+            if (!projectCard) {
+                console.error('ERROR: No project card found');
+                return;
+            }
+            
+            console.log('Found project card:', projectCard);
+            
+            const isExpanded = projectCard.classList.contains('expanded');
+            console.log('Current state - isExpanded:', isExpanded);
+            
+            // Log all current expanded cards BEFORE making changes
+            const allExpandedBefore = document.querySelectorAll('.project-card.expanded');
+            console.log('Expanded cards BEFORE action:', allExpandedBefore.length, allExpandedBefore);
+            
+            if (isExpanded) {
+                // Just collapse this card
+                projectCard.classList.remove('expanded');
+                console.log('✅ Collapsed the clicked card');
+            } else {
+                // First, close ALL expanded cards
+                const allExpanded = document.querySelectorAll('.project-card.expanded');
+                console.log('Closing', allExpanded.length, 'expanded cards');
+                
+                allExpanded.forEach((card, index) => {
+                    card.classList.remove('expanded');
+                    console.log(`  ✅ Closed card ${index + 1}:`, card);
+                });
+                
+                // Then expand the clicked card
+                projectCard.classList.add('expanded');
+                console.log('✅ Expanded the clicked card');
+            }
+            
+            // Log all expanded cards AFTER making changes
+            const allExpandedAfter = document.querySelectorAll('.project-card.expanded');
+            console.log('Expanded cards AFTER action:', allExpandedAfter.length, allExpandedAfter);
+            console.log('=== PROJECT TOGGLE END ===');
+        };
     }
 
     // Performance optimizations
