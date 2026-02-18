@@ -21,8 +21,41 @@ class PortfolioSite {
         this.initCertificates();
         this.initLightbox();
         this.initTimelineToggle();
+        this.initThemeToggle();
         this.initPerformanceOptimizations();
         this.initAccessibility();
+    }
+
+    // Theme Toggle (Dark/Light Mode)
+    initThemeToggle() {
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        if (!themeToggle) return;
+
+        // Check for saved theme preference or system preference
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        } else if (prefersDark) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const targetTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+            document.documentElement.setAttribute('data-theme', targetTheme);
+            localStorage.setItem('theme', targetTheme);
+
+            // Add a small rotation animation to the icon
+            const icon = themeToggle.querySelector('i');
+            icon.style.transition = 'transform 0.5s ease';
+            icon.style.transform = 'rotate(360deg)';
+            setTimeout(() => icon.style.transform = '', 500);
+        });
     }
 
     // Navigation & Mobile Menu
@@ -35,16 +68,16 @@ class PortfolioSite {
 
         // Header scroll behavior
         let lastScrollY = window.scrollY;
-        
+
         window.addEventListener('scroll', () => {
             const currentScrollY = window.scrollY;
-            
+
             // Header styling based on scroll
             if (currentScrollY > 100) {
-                header.style.background = 'rgba(248, 250, 252, 0.95)';
+                header.style.background = 'var(--header-scroll-bg)';
                 header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
             } else {
-                header.style.background = 'rgba(248, 250, 252, 0.8)';
+                header.style.background = 'var(--header-bg)';
                 header.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
             }
 
@@ -54,7 +87,7 @@ class PortfolioSite {
             } else {
                 header.style.transform = 'translateY(0)';
             }
-            
+
             // Back to top button
             if (backToTop) {
                 if (currentScrollY > 500) {
@@ -63,7 +96,7 @@ class PortfolioSite {
                     backToTop.classList.remove('visible');
                 }
             }
-            
+
             lastScrollY = currentScrollY;
         });
 
@@ -105,11 +138,11 @@ class PortfolioSite {
                 e.preventDefault();
                 const targetId = anchor.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
-                
+
                 if (targetElement) {
                     const headerHeight = header?.offsetHeight || 0;
                     const targetPosition = targetElement.offsetTop - headerHeight - 20;
-                    
+
                     window.scrollTo({
                         top: targetPosition,
                         behavior: 'smooth'
@@ -142,11 +175,11 @@ class PortfolioSite {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const sectionId = entry.target.id;
-                    
+
                     navLinks.forEach(link => {
                         link.classList.remove('active');
                     });
-                    
+
                     const activeLink = document.querySelector(`a[href="#${sectionId}"]`);
                     if (activeLink) {
                         activeLink.classList.add('active');
@@ -169,7 +202,7 @@ class PortfolioSite {
         // Setup initial state
         animatedElements.forEach((element) => {
             const delay = element.getAttribute('data-aos-delay') || 0;
-            
+
             element.style.opacity = '0';
             element.style.transform = this.getInitialTransform(element);
             element.style.transition = `all 0.6s ease ${delay}ms`;
@@ -195,7 +228,7 @@ class PortfolioSite {
 
     getInitialTransform(element) {
         const animation = element.getAttribute('data-aos');
-        
+
         switch (animation) {
             case 'fade-up':
                 return 'translateY(30px)';
@@ -217,12 +250,12 @@ class PortfolioSite {
         // Certificate toggle
         const showCertsBtn = document.getElementById('show-certs');
         const certsSection = document.getElementById('certifications');
-        
+
         if (showCertsBtn && certsSection) {
             showCertsBtn.addEventListener('click', (e) => {
                 e.preventDefault();
                 const isVisible = certsSection.style.display !== 'none';
-                
+
                 if (isVisible) {
                     certsSection.style.display = 'none';
                     showCertsBtn.innerHTML = 'View All Certifications <i class="fas fa-chevron-down"></i>';
@@ -241,15 +274,15 @@ class PortfolioSite {
         filterButtons.forEach(button => {
             button.addEventListener('click', () => {
                 const category = button.dataset.category;
-                
+
                 // Update active button
                 filterButtons.forEach(btn => btn.classList.remove('active'));
                 button.classList.add('active');
-                
+
                 // Filter certificates with staggered animation
                 certCards.forEach((card, index) => {
                     const shouldShow = category === 'all' || card.dataset.category === category;
-                    
+
                     if (shouldShow) {
                         card.style.display = 'block';
                         setTimeout(() => {
@@ -303,23 +336,23 @@ class PortfolioSite {
             // Check if clicked element is a project image
             if (e.target.matches('.project-image img')) {
                 e.preventDefault();
-                
+
                 const img = e.target;
                 const src = img.getAttribute('src');
                 const alt = img.getAttribute('alt') || '';
                 const projectCard = img.closest('.project-card');
                 const title = projectCard?.querySelector('h3')?.textContent || alt;
-                
+
                 openLightbox(src, alt, title);
             }
         });
 
         // Close button
         closeBtn.addEventListener('click', closeLightbox);
-        
+
         // Close on overlay click
         overlay.addEventListener('click', closeLightbox);
-        
+
         // Close on escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && modal.classList.contains('active')) {
@@ -331,10 +364,10 @@ class PortfolioSite {
     // Timeline toggle functionality
     initTimelineToggle() {
         // Global function for timeline toggle (called from onclick in HTML)
-        window.toggleTimelineItem = function(headerElement) {
+        window.toggleTimelineItem = function (headerElement) {
             const timelineItem = headerElement.closest('.timeline-item');
             const isExpanded = timelineItem.classList.contains('expanded');
-            
+
             if (isExpanded) {
                 timelineItem.classList.remove('expanded');
             } else {
@@ -342,32 +375,32 @@ class PortfolioSite {
                 document.querySelectorAll('.timeline-item.expanded').forEach(item => {
                     item.classList.remove('expanded');
                 });
-                
+
                 // Open the clicked item
                 timelineItem.classList.add('expanded');
             }
         };
 
         // Global function for project toggle (called from onclick in HTML)
-        window.toggleProjectItem = function(headerElement) {
+        window.toggleProjectItem = function (headerElement) {
             console.log('=== PROJECT TOGGLE START ===');
             console.log('Header element clicked:', headerElement);
-            
+
             const projectCard = headerElement.closest('.project-card');
             if (!projectCard) {
                 console.error('ERROR: No project card found');
                 return;
             }
-            
+
             console.log('Found project card:', projectCard);
-            
+
             const isExpanded = projectCard.classList.contains('expanded');
             console.log('Current state - isExpanded:', isExpanded);
-            
+
             // Log all current expanded cards BEFORE making changes
             const allExpandedBefore = document.querySelectorAll('.project-card.expanded');
             console.log('Expanded cards BEFORE action:', allExpandedBefore.length, allExpandedBefore);
-            
+
             if (isExpanded) {
                 // Just collapse this card
                 projectCard.classList.remove('expanded');
@@ -376,17 +409,17 @@ class PortfolioSite {
                 // First, close ALL expanded cards
                 const allExpanded = document.querySelectorAll('.project-card.expanded');
                 console.log('Closing', allExpanded.length, 'expanded cards');
-                
+
                 allExpanded.forEach((card, index) => {
                     card.classList.remove('expanded');
                     console.log(`  ✅ Closed card ${index + 1}:`, card);
                 });
-                
+
                 // Then expand the clicked card
                 projectCard.classList.add('expanded');
                 console.log('✅ Expanded the clicked card');
             }
-            
+
             // Log all expanded cards AFTER making changes
             const allExpandedAfter = document.querySelectorAll('.project-card.expanded');
             console.log('Expanded cards AFTER action:', allExpandedAfter.length, allExpandedAfter);
@@ -399,7 +432,7 @@ class PortfolioSite {
         // Lazy loading fallback for older browsers
         if (!('loading' in HTMLImageElement.prototype)) {
             const images = document.querySelectorAll('img[loading="lazy"]');
-            
+
             const imageObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -418,7 +451,7 @@ class PortfolioSite {
 
         // Preload critical assets
         const criticalAssets = ['assets/profile-image.jpg'];
-        
+
         criticalAssets.forEach(asset => {
             const link = document.createElement('link');
             link.rel = 'preload';
@@ -450,7 +483,7 @@ class PortfolioSite {
             if (e.key === 'Tab') {
                 document.body.classList.add('keyboard-nav');
             }
-            
+
             // Escape key to close mobile menu
             if (e.key === 'Escape') {
                 const mobileNav = document.querySelector('.mobile-nav');
@@ -483,10 +516,10 @@ class PortfolioSite {
 
         // Respect reduced motion preferences
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-        
+
         if (prefersReducedMotion.matches) {
             document.body.classList.add('reduced-motion');
-            
+
             const style = document.createElement('style');
             style.textContent = `
                 .reduced-motion * {
@@ -524,7 +557,7 @@ const utils = {
 
     throttle: (func, limit) => {
         let inThrottle;
-        return function() {
+        return function () {
             const args = arguments;
             const context = this;
             if (!inThrottle) {
